@@ -40,6 +40,12 @@
             color: #757575;
         }
 
+        header .subtitle {
+            font-size: 1rem;
+            color: #b3e5fc;
+            margin-bottom: 1.5rem;
+        }
+
         header p.typing-effect {
             font-size: 1.5rem;
             color: #b3e5fc;
@@ -47,7 +53,7 @@
         }
 
         header .avatar {
-            max-width: 30%;
+            max-width: 20%;
         }
 
         header .avatar img {
@@ -69,6 +75,36 @@
             color: #29b6f6;
         }
 
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .skill-badge {
+            background-color: #1e1e1e;
+            color: #b3e5fc;
+            border: 1px solid #b3e5fc;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .carousel-item img, .carousel-item video {
+            max-height: 400px;
+            width: 100%;
+            object-fit: contain;
+        }
+
         @keyframes typing {
             from { width: 0 }
             to { width: 100% }
@@ -79,12 +115,10 @@
             50% { border-color: white; }
         }
 
-        .typing-effect {
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: .15em solid #b3e5fc;
-            animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+        p.typing-effect::after {
+            content: '|';
+            display: inline;
+            animation: blink-caret 1s step-end infinite;
         }
     </style>
 </head>
@@ -96,92 +130,34 @@
             <p class="typing-effect" id="typing-text"></p>
             <div class="social-icons">
                 <a href="https://github.com/LiyueDa" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/liyue-da-13504528a" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/liyue-da-13504528a/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:fgp973@alumni.ku.dk"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="skills-container">
+                <div class="skill-badge">Python</div>
+                <div class="skill-badge">JavaScript</div>
+                <div class="skill-badge">CSS</div>
+                <div class="skill-badge">MATLAB</div>
+                <div class="skill-badge">Unity</div>
+                <div class="skill-badge">Arduino</div>
+                <div class="skill-badge">Welding</div>
+                <div class="skill-badge">Basic Circuit Technology</div>
+                <div class="skill-badge">3D Printing</div>
+                <div class="skill-badge">Blender</div>
+                <div class="skill-badge">UX Design</div>
+                <div class="skill-badge">User Study Design</div>
+                <div class="skill-badge">Vibrotactile Sensation</div>
+                <div class="skill-badge">Whole-Body Vibration</div>
+                <div class="skill-badge">Phantom Sensation</div>
             </div>
         </div>
         <div class="avatar">
-            <img src="images/Pixel_avatar.png" alt="Avatar">
+            <img src="images/avatar.jpg" alt="Liyue Da">
         </div>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <section id="profile" class="py-5">
-        <div class="container">
-            <h2 class="text-center animate__animated animate__fadeIn">Profile</h2>
-            <p class="lead text-center">I worked as a program manager at SenseTime Research Institute for nearly a year, which not only allowed me to learn and practice the background knowledge of UX design and user study design, but also allowed me to master the skills of using simple blender to draw paper diagrams, etc. At the same time, I am also very good at programming and testing python, javascript, and CSS (one of the results can be found at <a href="https://openxrlab.org.cn/indexEN" target="_blank">openxrlab.org.cn/indexEN</a>. I am responsible for the design and writing of the display demo).</p>
-            <p class="lead text-center">The PCOS I am currently doing at DIKU is related to vibrotactile sensation, which makes me completely familiar with some research directions of tactile and ergonomics. In particular, I am very familiar with whole-body vibration and phantom sensation. In addition, I know some simple software and hardware skills, including MATLAB signal simulation, welding, basic circuit technology, Arduino, etc.</p>
-            <p class="lead text-center">I studied animation and game programming during my undergraduate degree, and worked on a virtual human project while at SenseTime, so I am familiar with Unity programming and understand UE redirection. The master is studying at UIT, so is familiar with 3D printing and GCode. Understand human-computer interaction methods and theories.</p>
-        </div>
-    </section>
-    <section id="education" class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center animate__animated animate__fadeIn">Education Background</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card mb-4 bg-dark text-white">
-                        <div class="card-body">
-                            <h3 class="card-title">University of Copenhagen</h3>
-                            <p class="card-text">Computer Science Master (Sep 2023 - Jun 2025)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mb-4 bg-dark text-white">
-                        <div class="card-body">
-                            <h3 class="card-title">Central South University in China</h3>
-                            <p class="card-text">Computer Science and Technology Bachelor (Sep 2018 - Jun 2022)</p>
-                            <p class="card-text">GPA: 85.2/100</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="experience" class="py-5 bg-dark text-white">
-        <div class="container">
-            <h2 class="text-center animate__animated animate__fadeIn">Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-item-content animate__animated animate__fadeInUp bg-light text-dark">
-                        <h3>SenseTime</h3>
-                        <p>Algorithm Product & Project Manager Research Institute (Jul 2022 - Apr 2023)</p>
-                        <p>Our department wants to create a virtual live stream host for selling products, who can answer questions asked by users in the live broadcast room. Its responses are generated by a large language model.</p>
-                        <p>To stimulate users' desire to purchase, I need to design a library of keywords and actions, and plan how to correlate them during the live broadcast to enhance the viewing experience of users. For example, for numbers 0-9, the corresponding actions include simply extending the corresponding fingers and waving the entire forearm to represent the numbers. When the host speaks the next word quickly and with a softer tone, the former action should be used for matching, otherwise, the latter is used. Additionally, to prevent visual fatigue from repetitive actions, the same keyword will not trigger the same action within five minutes, and so on.</p>
-                        <p>Since the text generated by large models may sometimes be inaccurate, offensive, or problematic in various ways, and there is no method that can 100% avoid this issue; additionally, there might be times when users do not ask questions. I also need to consider whether to set up predetermined questions, when to activate these questions, and how to prioritize answering questions when there are too many from users, and so on.</p>
-                        <span class="circle"></span>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-item-content animate__animated animate__fadeInUp bg-light text-dark">
-                        <h3>TikTok China</h3>
-                        <p>Internship (Mar 2021 - Sep 2021)</p>
-                        <p>We have created a special effects materials library to recommend effects for users to use on TikTok. I am responsible for the strategy design of this.</p>
-                        <p>I attempted to calculate a recommendation score using factors like user like rate, save rate, and tag popularity. The higher the recommendation score, the more likely it is to be pushed to users. Then, we conducted A/B tests, determining the viability of the strategy based on the average conversion rate of the materials (the ratio of the number of people who click on the material to the number of users who actually use it) and user survey questionnaires.</p>
-                        <span class="circle"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section id="projects" class="bg-light py-5">
         <div class="container">
-            <h2 class="text-center animate__animated animate__fadeIn">Project Experience</h2>
+            <h2 class="section-title">Project Experience</h2>
             <div id="projectCarousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#projectCarousel" data-slide-to="0" class="active"></li>
@@ -190,7 +166,7 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="card">
+                        <div class="card bg-dark text-white">
                             <img src="images/图例1.jpg" class="d-block w-100" alt="Vibration Platform Experiment">
                             <div class="card-body">
                                 <h3 class="card-title">Vibration Platform</h3>
@@ -199,7 +175,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="card">
+                        <div class="card bg-dark text-white">
                             <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Tank Battle Game">
                             <div class="card-body">
                                 <h3 class="card-title">Tank Battle Game</h3>
@@ -208,7 +184,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="card">
+                        <div class="card bg-dark text-white">
                             <video controls class="d-block w-100">
                                 <source src="videos/IMG_5088.MOV" type="video/mp4">
                                 Your browser does not support the video tag.
@@ -233,31 +209,16 @@
             </div>
         </div>
     </section>
-    <section id="skills" class="bg-dark py-5 text-white">
-        <div class="container">
-            <h2 class="text-center animate__animated animate__fadeIn">Skills</h2>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item bg-dark text-white">Programming: Python, JavaScript, CSS</li>
-                <li class="list-group-item bg-dark text-white">Software: MATLAB, Unity, Arduino</li>
-                <li class="list-group-item bg-dark text-white">Hardware: Welding, Basic Circuit Technology, 3D Printing</li>
-                <li class="list-group-item bg-dark text-white">Design: Blender, UX Design, User Study Design</li>
-                <li class="list-group-item bg-dark text-white">Research: Vibrotactile Sensation, Whole-Body Vibration, Phantom Sensation</li>
-            </ul>
-        </div>
-    </section>
     <footer class="bg-dark text-white text-center py-3">
         <div class="container">
-            <p>&copy; 2024 Da Liyue</p>
+            <p>&copy; 2024 Liyue Da</p>
             <p>Contact: <a href="mailto:fgp973@alumni.ku.dk" class="text-white">fgp973@alumni.ku.dk</a> | Phone: +45 91880503</p>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init();
-
         const typedTextSpan = document.getElementById("typing-text");
         const textArray = ["a HCI researcher", "a Developer", "a Program Manager", "a UX Designer", "an Amateur Singer"];
         const typingDelay = 100;
