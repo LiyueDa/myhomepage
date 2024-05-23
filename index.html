@@ -6,6 +6,7 @@
     <title>Da Liyue's Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header class="bg-primary text-white text-center py-5">
@@ -15,7 +16,7 @@
             <a href="mailto:fgp973@alumni.ku.dk" class="btn btn-outline-light mt-3">Contact Me</a>
         </div>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">Portfolio</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,9 +36,9 @@
     <section id="profile" class="py-5">
         <div class="container">
             <h2 class="text-center">Profile</h2>
-            <p>I worked as a program manager at SenseTime Research Institute for nearly a year, which not only allowed me to learn and practice the background knowledge of UX design and user study design, but also allowed me to master the skills of using simple blender to draw paper diagrams, etc. At the same time, I am also very good at programming and testing python, javascript, and CSS (one of the results can be found at <a href="https://openxrlab.org.cn/indexEN">https://openxrlab.org.cn/indexEN</a>. I am responsible for the design and writing of the display demo).</p>
-            <p>The PCOS I am currently doing at DIKU is related to vibrotactile sensation, which makes me completely familiar with some research directions of tactile and ergonomics. In particular, I am very familiar with whole-body vibration and phantom sensation. In addition, I know some simple software and hardware skills, including MATLAB signal simulation, welding, basic circuit technology, Arduino, etc.</p>
-            <p>I studied animation and game programming during my undergraduate degree, and worked on a virtual human project while at SenseTime, so I am familiar with Unity programming and understand UE redirection. The master is studying at UIT, so is familiar with 3D printing and GCode. Understand human-computer interaction methods and theories.</p>
+            <p class="lead">I worked as a program manager at SenseTime Research Institute for nearly a year, which not only allowed me to learn and practice the background knowledge of UX design and user study design, but also allowed me to master the skills of using simple blender to draw paper diagrams, etc. At the same time, I am also very good at programming and testing python, javascript, and CSS (one of the results can be found at <a href="https://openxrlab.org.cn/indexEN" target="_blank">openxrlab.org.cn/indexEN</a>. I am responsible for the design and writing of the display demo).</p>
+            <p class="lead">The PCOS I am currently doing at DIKU is related to vibrotactile sensation, which makes me completely familiar with some research directions of tactile and ergonomics. In particular, I am very familiar with whole-body vibration and phantom sensation. In addition, I know some simple software and hardware skills, including MATLAB signal simulation, welding, basic circuit technology, Arduino, etc.</p>
+            <p class="lead">I studied animation and game programming during my undergraduate degree, and worked on a virtual human project while at SenseTime, so I am familiar with Unity programming and understand UE redirection. The master is studying at UIT, so is familiar with 3D printing and GCode. Understand human-computer interaction methods and theories.</p>
         </div>
     </section>
     <section id="education" class="bg-light py-5">
@@ -45,13 +46,21 @@
             <h2 class="text-center">Education Background</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <h3>University of Copenhagen</h3>
-                    <p>Computer Science Master (Sep 2023 - Jun 2025)</p>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">University of Copenhagen</h3>
+                            <p class="card-text">Computer Science Master (Sep 2023 - Jun 2025)</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <h3>Central South University in China</h3>
-                    <p>Computer Science and Technology Bachelor (Sep 2018 - Jun 2022)</p>
-                    <p>GPA: 85.2/100</p>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Central South University in China</h3>
+                            <p class="card-text">Computer Science and Technology Bachelor (Sep 2018 - Jun 2022)</p>
+                            <p class="card-text">GPA: 85.2/100</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,17 +70,23 @@
             <h2 class="text-center">Work Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <h3>SenseTime</h3>
-                    <p>Algorithm Product & Project Manager Research Institute (Jul 2022 - Apr 2023)</p>
-                    <p>Our department wants to create a virtual live stream host for selling products, who can answer questions asked by users in the live broadcast room. Its responses are generated by a large language model.</p>
-                    <p>To stimulate users' desire to purchase, I need to design a library of keywords and actions, and plan how to correlate them during the live broadcast to enhance the viewing experience of users. For example, for numbers 0-9, the corresponding actions include simply extending the corresponding fingers and waving the entire forearm to represent the numbers. When the host speaks the next word quickly and with a softer tone, the former action should be used for matching, otherwise, the latter is used. Additionally, to prevent visual fatigue from repetitive actions, the same keyword will not trigger the same action within five minutes, and so on.</p>
-                    <p>Since the text generated by large models may sometimes be inaccurate, offensive, or problematic in various ways, and there is no method that can 100% avoid this issue; additionally, there might be times when users do not ask questions. I also need to consider whether to set up predetermined questions, when to activate these questions, and how to prioritize answering questions when there are too many from users, and so on.</p>
+                    <div class="timeline-item-content">
+                        <h3>SenseTime</h3>
+                        <p>Algorithm Product & Project Manager Research Institute (Jul 2022 - Apr 2023)</p>
+                        <p>Our department wants to create a virtual live stream host for selling products, who can answer questions asked by users in the live broadcast room. Its responses are generated by a large language model.</p>
+                        <p>To stimulate users' desire to purchase, I need to design a library of keywords and actions, and plan how to correlate them during the live broadcast to enhance the viewing experience of users. For example, for numbers 0-9, the corresponding actions include simply extending the corresponding fingers and waving the entire forearm to represent the numbers. When the host speaks the next word quickly and with a softer tone, the former action should be used for matching, otherwise, the latter is used. Additionally, to prevent visual fatigue from repetitive actions, the same keyword will not trigger the same action within five minutes, and so on.</p>
+                        <p>Since the text generated by large models may sometimes be inaccurate, offensive, or problematic in various ways, and there is no method that can 100% avoid this issue; additionally, there might be times when users do not ask questions. I also need to consider whether to set up predetermined questions, when to activate these questions, and how to prioritize answering questions when there are too many from users, and so on.</p>
+                        <span class="circle"></span>
+                    </div>
                 </div>
                 <div class="timeline-item">
-                    <h3>TikTok China</h3>
-                    <p>Internship (Mar 2021 - Sep 2021)</p>
-                    <p>We have created a special effects materials library to recommend effects for users to use on TikTok. I am responsible for the strategy design of this.</p>
-                    <p>I attempted to calculate a recommendation score using factors like user like rate, save rate, and tag popularity. The higher the recommendation score, the more likely it is to be pushed to users. Then, we conducted A/B tests, determining the viability of the strategy based on the average conversion rate of the materials (the ratio of the number of people who click on the material to the number of users who actually use it) and user survey questionnaires.</p>
+                    <div class="timeline-item-content">
+                        <h3>TikTok China</h3>
+                        <p>Internship (Mar 2021 - Sep 2021)</p>
+                        <p>We have created a special effects materials library to recommend effects for users to use on TikTok. I am responsible for the strategy design of this.</p>
+                        <p>I attempted to calculate a recommendation score using factors like user like rate, save rate, and tag popularity. The higher the recommendation score, the more likely it is to be pushed to users. Then, we conducted A/B tests, determining the viability of the strategy based on the average conversion rate of the materials (the ratio of the number of people who click on the material to the number of users who actually use it) and user survey questionnaires.</p>
+                        <span class="circle"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,24 +96,35 @@
             <h2 class="text-center">Project Experience</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <h3>Vibration Platform</h3>
-                    <p>This is the PCOS project I am currently working on. According to ergonomic knowledge, at a specific frequency, the human body will vibrate throughout the body, and different vibration frequencies or combinations of vibration modes may give people some wonderful experiences. Our previous experiments wanted to see whether different vibrations could cause vibrations in fixed parts of the human body, and more recently we have tried to make vibrations move in different directions within the human body. The PCOS project I am currently working on explores the moving phantom sensation under whole-body vibration. Completed the entire process from forming an idea, assembling and building equipment (including the selection and construction of wooden platforms, and welding programming of accelerators), designing user experiments, executing experiments, data analysis, and forming a thesis.</p>
-                    <img src="images/图例1.jpg" alt="Vibration Platform Experiment" class="img-fluid">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Vibration Platform</h3>
+                            <p class="card-text">This is the PCOS project I am currently working on. According to ergonomic knowledge, at a specific frequency, the human body will vibrate throughout the body, and different vibration frequencies or combinations of vibration modes may give people some wonderful experiences. Our previous experiments wanted to see whether different vibrations could cause vibrations in fixed parts of the human body, and more recently we have tried to make vibrations move in different directions within the human body. The PCOS project I am currently working on explores the moving phantom sensation under whole-body vibration. Completed the entire process from forming an idea, assembling and building equipment (including the selection and construction of wooden platforms, and welding programming of accelerators), designing user experiments, executing experiments, data analysis, and forming a thesis.</p>
+                            <img src="images/图例1.jpg" alt="Vibration Platform Experiment" class="img-fluid">
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <h3>Tank Battle Game</h3>
-                    <p>This is a test of my course. I developed a stand-alone game in which two tanks battle in a desert factory scene. The model was imported from the Unity asset store. Completed the layout of the scene, battle special effects and sound effects. Tank charging mechanism, ballistic simulation, and development of hit events.</p>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Tank Battle Game</h3>
+                            <p class="card-text">This is a test of my course. I developed a stand-alone game in which two tanks battle in a desert factory scene. The model was imported from the Unity asset store. Completed the layout of the scene, battle special effects and sound effects. Tank charging mechanism, ballistic simulation, and development of hit events.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <h3>3D Printer Rendering for Haptic Interaction in VR</h3>
-                    <p>Design plan: clarify the usage scenarios we want to target; consider boundary conditions; search for papers to find ideas for solving problems; design evaluation indicators.</p>
-                    <p>GCode: Design GCode to control the 3D printer to launch printed items.</p>
-                    <p>3D design: I am currently considering whether to make some small prototypes to help launch items. I have previously made Bluetooth headset protective cases.</p>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">3D Printer Rendering for Haptic Interaction in VR</h3>
+                            <p class="card-text">Design plan: clarify the usage scenarios we want to target; consider boundary conditions; search for papers to find ideas for solving problems; design evaluation indicators.</p>
+                            <p class="card-text">GCode: Design GCode to control the 3D printer to launch printed items.</p>
+                            <p class="card-text">3D design: I am currently considering whether to make some small prototypes to help launch items. I have previously made Bluetooth headset protective cases.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
     <section id="skills" class="py-5">
         <div class="container">
             <h2 class="text-center">Skills</h2>
