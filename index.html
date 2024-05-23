@@ -94,34 +94,51 @@
     <section id="projects" class="bg-light py-5">
         <div class="container">
             <h2 class="text-center">Project Experience</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h3 class="card-title">Vibration Platform</h3>
-                            <p class="card-text">This is the PCOS project I am currently working on. According to ergonomic knowledge, at a specific frequency, the human body will vibrate throughout the body, and different vibration frequencies or combinations of vibration modes may give people some wonderful experiences. Our previous experiments wanted to see whether different vibrations could cause vibrations in fixed parts of the human body, and more recently we have tried to make vibrations move in different directions within the human body. The PCOS project I am currently working on explores the moving phantom sensation under whole-body vibration. Completed the entire process from forming an idea, assembling and building equipment (including the selection and construction of wooden platforms, and welding programming of accelerators), designing user experiments, executing experiments, data analysis, and forming a thesis.</p>
-                            <img src="images/图例1.jpg" alt="Vibration Platform Experiment" class="img-fluid">
+            <div id="projectCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#projectCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#projectCarousel" data-slide-to="1"></li>
+                    <li data-target="#projectCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <img src="images/图例1.jpg" class="d-block w-100" alt="Vibration Platform Experiment">
+                            <div class="card-body">
+                                <h3 class="card-title">Vibration Platform</h3>
+                                <p class="card-text">This is the PCOS project I am currently working on. According to ergonomic knowledge, at a specific frequency, the human body will vibrate throughout the body, and different vibration frequencies or combinations of vibration modes may give people some wonderful experiences. Our previous experiments wanted to see whether different vibrations could cause vibrations in fixed parts of the human body, and more recently we have tried to make vibrations move in different directions within the human body. The PCOS project I am currently working on explores the moving phantom sensation under whole-body vibration. Completed the entire process from forming an idea, assembling and building equipment (including the selection and construction of wooden platforms, and welding programming of accelerators), designing user experiments, executing experiments, data analysis, and forming a thesis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Tank Battle Game">
+                            <div class="card-body">
+                                <h3 class="card-title">Tank Battle Game</h3>
+                                <p class="card-text">This is a test of my course. I developed a stand-alone game in which two tanks battle in a desert factory scene. The model was imported from the Unity asset store. Completed the layout of the scene, battle special effects and sound effects. Tank charging mechanism, ballistic simulation, and development of hit events.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="3D Printer Rendering for Haptic Interaction in VR">
+                            <div class="card-body">
+                                <h3 class="card-title">3D Printer Rendering for Haptic Interaction in VR</h3>
+                                <p class="card-text">Design plan: clarify the usage scenarios we want to target; consider boundary conditions; search for papers to find ideas for solving problems; design evaluation indicators.</p>
+                                <p class="card-text">GCode: Design GCode to control the 3D printer to launch printed items.</p>
+                                <p class="card-text">3D design: I am currently considering whether to make some small prototypes to help launch items. I have previously made Bluetooth headset protective cases.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h3 class="card-title">Tank Battle Game</h3>
-                            <p class="card-text">This is a test of my course. I developed a stand-alone game in which two tanks battle in a desert factory scene. The model was imported from the Unity asset store. Completed the layout of the scene, battle special effects and sound effects. Tank charging mechanism, ballistic simulation, and development of hit events.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h3 class="card-title">3D Printer Rendering for Haptic Interaction in VR</h3>
-                            <p class="card-text">Design plan: clarify the usage scenarios we want to target; consider boundary conditions; search for papers to find ideas for solving problems; design evaluation indicators.</p>
-                            <p class="card-text">GCode: Design GCode to control the 3D printer to launch printed items.</p>
-                            <p class="card-text">3D design: I am currently considering whether to make some small prototypes to help launch items. I have previously made Bluetooth headset protective cases.</p>
-                        </div>
-                    </div>
-                </div>
+                <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
     </section>
