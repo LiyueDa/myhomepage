@@ -16,10 +16,11 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background-color: #f5f5f5;
         }
 
         header {
-            background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.8)), url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
             color: white;
             padding: 100px 0;
             text-align: center;
@@ -27,10 +28,12 @@
 
         header h1 {
             font-size: 3rem;
+            margin-bottom: 0.5rem;
         }
 
         header p {
             font-size: 1.2rem;
+            margin-bottom: 1.5rem;
         }
 
         header a {
@@ -53,6 +56,15 @@
 
         section {
             padding: 60px 0;
+        }
+
+        section.bg-light {
+            background-color: #f5f5f5;
+        }
+
+        section.bg-dark {
+            background-color: #343a40;
+            color: white;
         }
 
         .timeline {
@@ -153,13 +165,30 @@
                 transform: translateY(0);
             }
         }
+
+        .typing-effect {
+            border-right: .15em solid #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: white; }
+        }
     </style>
 </head>
 <body>
     <header class="bg-primary text-white text-center py-5">
         <div class="container">
             <h1>Da Liyue</h1>
-            <p>Program Manager, UX Designer, Programmer</p>
+            <p class="typing-effect">I am a Program Manager, UX Designer, Programmer</p>
             <a href="mailto:fgp973@alumni.ku.dk" class="btn btn-outline-light mt-3">Contact Me</a>
         </div>
     </header>
@@ -183,9 +212,9 @@
     <section id="profile" class="py-5">
         <div class="container">
             <h2 class="text-center animate__animated animate__fadeIn">Profile</h2>
-            <p class="lead">I worked as a program manager at SenseTime Research Institute for nearly a year, which not only allowed me to learn and practice the background knowledge of UX design and user study design, but also allowed me to master the skills of using simple blender to draw paper diagrams, etc. At the same time, I am also very good at programming and testing python, javascript, and CSS (one of the results can be found at <a href="https://openxrlab.org.cn/indexEN" target="_blank">openxrlab.org.cn/indexEN</a>. I am responsible for the design and writing of the display demo).</p>
-            <p class="lead">The PCOS I am currently doing at DIKU is related to vibrotactile sensation, which makes me completely familiar with some research directions of tactile and ergonomics. In particular, I am very familiar with whole-body vibration and phantom sensation. In addition, I know some simple software and hardware skills, including MATLAB signal simulation, welding, basic circuit technology, Arduino, etc.</p>
-            <p class="lead">I studied animation and game programming during my undergraduate degree, and worked on a virtual human project while at SenseTime, so I am familiar with Unity programming and understand UE redirection. The master is studying at UIT, so is familiar with 3D printing and GCode. Understand human-computer interaction methods and theories.</p>
+            <p class="lead text-center">I worked as a program manager at SenseTime Research Institute for nearly a year, which not only allowed me to learn and practice the background knowledge of UX design and user study design, but also allowed me to master the skills of using simple blender to draw paper diagrams, etc. At the same time, I am also very good at programming and testing python, javascript, and CSS (one of the results can be found at <a href="https://openxrlab.org.cn/indexEN" target="_blank">openxrlab.org.cn/indexEN</a>. I am responsible for the design and writing of the display demo).</p>
+            <p class="lead text-center">The PCOS I am currently doing at DIKU is related to vibrotactile sensation, which makes me completely familiar with some research directions of tactile and ergonomics. In particular, I am very familiar with whole-body vibration and phantom sensation. In addition, I know some simple software and hardware skills, including MATLAB signal simulation, welding, basic circuit technology, Arduino, etc.</p>
+            <p class="lead text-center">I studied animation and game programming during my undergraduate degree, and worked on a virtual human project while at SenseTime, so I am familiar with Unity programming and understand UE redirection. The master is studying at UIT, so is familiar with 3D printing and GCode. Understand human-computer interaction methods and theories.</p>
         </div>
     </section>
     <section id="education" class="bg-light py-5">
@@ -193,7 +222,7 @@
             <h2 class="text-center animate__animated animate__fadeIn">Education Background</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="card mb-4">
+                    <div class="card mb-4 bg-dark text-white">
                         <div class="card-body">
                             <h3 class="card-title">University of Copenhagen</h3>
                             <p class="card-text">Computer Science Master (Sep 2023 - Jun 2025)</p>
@@ -201,7 +230,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="card mb-4">
+                    <div class="card mb-4 bg-dark text-white">
                         <div class="card-body">
                             <h3 class="card-title">Central South University in China</h3>
                             <p class="card-text">Computer Science and Technology Bachelor (Sep 2018 - Jun 2022)</p>
@@ -212,12 +241,12 @@
             </div>
         </div>
     </section>
-    <section id="experience" class="py-5">
+    <section id="experience" class="py-5 bg-dark text-white">
         <div class="container">
             <h2 class="text-center animate__animated animate__fadeIn">Work Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-item-content animate__animated animate__fadeInUp">
+                    <div class="timeline-item-content animate__animated animate__fadeInUp bg-light text-dark">
                         <h3>SenseTime</h3>
                         <p>Algorithm Product & Project Manager Research Institute (Jul 2022 - Apr 2023)</p>
                         <p>Our department wants to create a virtual live stream host for selling products, who can answer questions asked by users in the live broadcast room. Its responses are generated by a large language model.</p>
@@ -227,7 +256,7 @@
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-item-content animate__animated animate__fadeInUp">
+                    <div class="timeline-item-content animate__animated animate__fadeInUp bg-light text-dark">
                         <h3>TikTok China</h3>
                         <p>Internship (Mar 2021 - Sep 2021)</p>
                         <p>We have created a special effects materials library to recommend effects for users to use on TikTok. I am responsible for the strategy design of this.</p>
@@ -292,15 +321,15 @@
             </div>
         </div>
     </section>
-    <section id="skills" class="py-5">
+    <section id="skills" class="bg-dark py-5 text-white">
         <div class="container">
             <h2 class="text-center animate__animated animate__fadeIn">Skills</h2>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Programming: Python, JavaScript, CSS</li>
-                <li class="list-group-item">Software: MATLAB, Unity, Arduino</li>
-                <li class="list-group-item">Hardware: Welding, Basic Circuit Technology, 3D Printing</li>
-                <li class="list-group-item">Design: Blender, UX Design, User Study Design</li>
-                <li class="list-group-item">Research: Vibrotactile Sensation, Whole-Body Vibration, Phantom Sensation</li>
+                <li class="list-group-item bg-dark text-white">Programming: Python, JavaScript, CSS</li>
+                <li class="list-group-item bg-dark text-white">Software: MATLAB, Unity, Arduino</li>
+                <li class="list-group-item bg-dark text-white">Hardware: Welding, Basic Circuit Technology, 3D Printing</li>
+                <li class="list-group-item bg-dark text-white">Design: Blender, UX Design, User Study Design</li>
+                <li class="list-group-item bg-dark text-white">Research: Vibrotactile Sensation, Whole-Body Vibration, Phantom Sensation</li>
             </ul>
         </div>
     </section>
@@ -316,6 +345,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init();
+
+        const typedTextSpan = document.querySelector(".typing-effect");
+        const textArray = ["a Program Manager", "a UX Designer", "a Programmer"];
+        const typingDelay = 200;
+        const erasingDelay = 100;
+        const newTextDelay = 2000; // Delay between current and next text
+        let textArrayIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < textArray[textArrayIndex].length) {
+                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingDelay);
+            } else {
+                setTimeout(erase, newTextDelay);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, erasingDelay);
+            } else {
+                textArrayIndex++;
+                if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+                setTimeout(type, typingDelay + 1100);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (textArray.length) setTimeout(type, newTextDelay + 250);
+        });
     </script>
 </body>
 </html>
