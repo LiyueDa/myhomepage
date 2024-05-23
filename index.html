@@ -134,7 +134,7 @@
             border: none;
         }
 
-        .carousel-item img {
+        .carousel-item img, .carousel-item video {
             max-height: 400px;
             width: 100%;
             object-fit: contain;
@@ -254,7 +254,10 @@
                     </div>
                     <div class="carousel-item">
                         <div class="card">
-                            <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="3D Printer Rendering for Haptic Interaction in VR">
+                            <video controls class="d-block w-100">
+                                <source src="videos/IMG_5088.MOV" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                             <div class="card-body">
                                 <h3 class="card-title">3D Printer Rendering for Haptic Interaction in VR</h3>
                                 <p class="card-text">Design plan: clarify the usage scenarios we want to target; consider boundary conditions; search for papers to find ideas for solving problems; design evaluation indicators.</p>
