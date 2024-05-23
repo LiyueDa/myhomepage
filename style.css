@@ -1,202 +1,149 @@
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #0a0a0a;
+    color: #f5f5f5;
 }
 
 header {
-    background: #007bff;
-    color: white;
-    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #0a0a0a;
+}
+
+header .intro {
+    max-width: 50%;
 }
 
 header h1 {
     font-size: 3rem;
+    margin: 0;
+    color: #b3e5fc;
 }
 
-header p {
-    font-size: 1.2rem;
+header h2 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    color: #757575;
 }
 
-header a {
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: white;
-    border: 2px solid white;
-    padding: 10px 20px;
-    transition: background 0.3s, color 0.3s;
+header .subtitle {
+    font-size: 1rem;
+    color: #b3e5fc;
+    margin-bottom: 1.5rem;
 }
 
-header a:hover {
-    background: white;
-    color: #007bff;
+header p.typing-effect {
+    font-size: 1.5rem;
+    color: #b3e5fc;
+    margin-bottom: 1.5rem;
 }
 
-.navbar {
-    margin-bottom: 0;
+header .avatar {
+    max-width: 20%;
 }
 
-section {
-    padding: 60px 0;
-}
-
-.timeline {
-    position: relative;
-    padding: 20px 0;
-    list-style: none;
-}
-
-.timeline::before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 40px;
-    width: 2px;
-    margin-left: -1.5px;
-    content: '';
-    background-color: #e9ecef;
-}
-
-.timeline-item {
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.timeline-item-content {
-    margin-left: 60px;
-    background: #fff;
-    border: 1px solid #e9ecef;
-    padding: 20px;
-    border-radius: 4px;
-    position: relative;
-}
-
-.timeline-item-content h3 {
-    margin-top: 0;
-}
-
-.timeline-item-content::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.timeline-item-content::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: -14px;
-    width: 10px;
-    height: 10px;
+header .avatar img {
+    width: 100%;
     border-radius: 50%;
-    background: #007bff;
+}
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: #b3e5fc;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.social-icons a:hover {
+    color: #29b6f6;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: white;
+    }
+}
+
+.typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid #b3e5fc;
+    animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+.carousel-item img,
+.carousel-item video {
+    max-height: 400px;
+    width: auto;
+    margin: 0 auto;
+    object-fit: contain;
 }
 
 .card {
     border: none;
+    background-color: #0a0a0a;
 }
 
 .card-body {
+    background-color: #1a1a1a;
     padding: 20px;
+    border-radius: 10px;
+    color: #f5f5f5;
 }
 
 .card-title {
-    margin-bottom: 10px;
+    color: #b3e5fc;
+    font-size: 1.5rem;
 }
 
 .card-text {
-    margin-bottom: 0;
+    color: #b3e5fc;
+    font-size: 1rem;
 }
 
-.footer {
-    background: #343a40;
-    color: white;
-    padding: 30px 0;
+.skills {
+    text-align: center;
+    margin-top: 20px;
 }
 
-.list-group-item {
-    background: transparent;
-    border: none;
-}
-.icon {
-    width: 50px;
-    height: 50px;
+.skills .skill-item {
     display: inline-block;
     margin: 10px;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-color: transparent; 
 }
 
-.icon-python {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAQUlEQVQoz2NgwAT/gMTAUBIBYRiAGhJQkGYqHGYkBUxNAIkBMJlA4EhMQkGBpoFMKoZIkgSgXHgVwqAIkFocpEdkAEOuJMRWAcg6AAAAABJRU5ErkJggg==');
+.skills img {
+    max-width: 50px;
+    display: block;
+    margin: 0 auto;
+    background-color: transparent; 
 }
 
-.icon-javascript {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAKElEQVQoz2NAgEH/ACj4GAgCWJgytMMJCD0kAEVSSkxGSilZ4F0iIAdDMpLEQFJgA0QAKnCC7HvT0GIAAAAASUVORK5CYII=');
-}
-
-.icon-css {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAALklEQVQoz2NgwAcYGP4HApV0cgqEoaWhYVt4BLFQSDFiEdICqgHGAVBiQCiWgiTAAABrPJPQ/JU48AAAAASUVORK5CYII=');
-}
-
-.icon-matlab {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAKUlEQVQoz2NgQAH/AGgDGABmKIIgYmrhCiBoSMFfCoUVEQsyAnScilA2CCBhIQAAMAUimBVHUx0QAAAAASUVORK5CYII=');
-}
-
-.icon-unity {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAN0lEQVQoz2NgIAWMBqwMDAwMRJoQTS3A+FkIzUSXpgQPiEMnBPBIJSgxhZ4uA9EESCEpHNDgAQA2qs5xjGghsAAAAASUVORK5CYII=');
-}
-
-.icon-arduino {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAKUlEQVQoz2NggAEFwWqgCaZgCgGKZjCYMYGRBkAFbB0YRS0dLZmVoAAAPSDDwV5oPMAAAAAElFTkSuQmCC');
-}
-
-.icon-welding {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAM0lEQVQoz2NgwAMHBIj+wqXB6lH3DjEgWYI5ZCw2JIEw7ZZwkgWQJGBSkB6cBlBZWYmAAAXb+QrL9JBRcAAAAASUVORK5CYII=');
-}
-
-.icon-circuit {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAKUlEQVQoz2NgIAWMBqwpMBowJgDQSgZS0cgz0lUw7YRCIiKTxQFwMACJ9HjFN2IHbAAAAAElFTkSuQmCC');
-}
-
-.icon-3dprinting {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAKUlEQVQoz2NgIAWMBqwpMA0wJgDQSgZS0cgz0lUw7YRCIiKTxQFwMAJqRGFzBLH0wAAAAASUVORK5CYII=');
-}
-
-.icon-blender {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAKElEQVQoz2NgwAVcGhIxIlgYgVFMGoMwJkIF5mAoEBWiFsQRKAAAIiGDW6kzBOAAAAAASUVORK5CYII=');
-}
-
-.icon-uxdesign {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAMElEQVQoz2NggAKygGmYAYxUwFCA9FiEzk6JFSJlh4GTRgVBUEK5BiUSkYCAAAP3Pwi3S8nS0AAAAAElFTkSuQmCC');
-}
-
-.icon-userstudy {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAALklEQVQoz2NgwAMHBIj+wqXB6lH3DjEgWYI5ZCw2JIEw7ZZwkgWQJGBSkB6cBlBZWYmAAAOZCKq8pU2a8AAAAAElFTkSuQmCC');
-}
-
-.icon-vibrotactile {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAK0lEQVQoz2NgIAWMBqwpMBowJgDQSgZS0cgz0lUw7YRCIiKTxQFwMAJlyHEyRfhqIAAAAASUVORK5CYII=');
-}
-
-.icon-wholebody {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAK0lEQVQoz2NgIAWMBqwJGBBIETgLSkJmVoAzwGGNaJkZQVlBgACMGFIMCgBlRwUgAAAABJRU5ErkJggg==');
-}
-
-.icon-phantom {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAK0lEQVQoz2NgIAWMBqwpMA0wJgDQSgZS0cgz0lUw7YRCIiKTxQFwMAFbyHFySAAAABJRU5ErkJggg==');
-}
-
-.icon-pytorch {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAMElEQVQoz2NgwAMHBIj+wqXB6lH3DjEgWYI5ZCw2JIEw7ZZwkgWQJGBSkB6cBlBZWYmAAAANXxD61GEdp0AAAAAElFTkSuQmCC');
-}
-
-.icon-cpp {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAKElEQVQoz2NggAEFwQrmAdIpwAGxjFwsFgCDsV6Gjwhq0MQNBiURWVkEgA4iEQwRAAAAABJRU5ErkJggg==');
-}
-
-.icon-latex {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAADJviZTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAKUlEQVQoz2NgwAVcGhIxIlgYgVFMGoMwJkIF5mAoEBWiFsQRKAAABNYDVSFGoxkAAAAASUVORK5CYII=');
+.skills p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #b3e5fc;
 }
