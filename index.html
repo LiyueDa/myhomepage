@@ -2,175 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Da Liyue's Portfolio</title>
+    <title>Liyue Da's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="styles.css">
     <style>
-        /* 内嵌的样式表，替换 styles.css */
         body {
             font-family: 'Arial', sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            color: #333;
-            background-color: #f5f5f5;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
         }
 
         header {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
-            color: white;
-            padding: 100px 0;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+            background-color: #0a0a0a;
+        }
+
+        header .intro {
+            max-width: 50%;
         }
 
         header h1 {
             font-size: 3rem;
-            margin-bottom: 0.5rem;
+            margin: 0;
+            color: #b3e5fc;
         }
 
-        header p {
-            font-size: 1.2rem;
+        header h2 {
+            font-size: 2rem;
+            margin: 0.5rem 0;
+            color: #757575;
+        }
+
+        header p.typing-effect {
+            font-size: 1.5rem;
+            color: #b3e5fc;
             margin-bottom: 1.5rem;
         }
 
-        header a {
-            font-size: 1.2rem;
-            text-decoration: none;
-            color: white;
-            border: 2px solid white;
-            padding: 10px 20px;
-            transition: background 0.3s, color 0.3s;
+        header .avatar {
+            max-width: 45%;
         }
 
-        header a:hover {
-            background: white;
-            color: #007bff;
-        }
-
-        .navbar {
-            margin-bottom: 0;
-        }
-
-        section {
-            padding: 60px 0;
-        }
-
-        section.bg-light {
-            background-color: #f5f5f5;
-        }
-
-        section.bg-dark {
-            background-color: #343a40;
-            color: white;
-        }
-
-        .timeline {
-            position: relative;
-            padding: 20px 0;
-            list-style: none;
-        }
-
-        .timeline::before {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 40px;
-            width: 2px;
-            margin-left: -1.5px;
-            content: '';
-            background-color: #e9ecef;
-        }
-
-        .timeline-item {
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .timeline-item-content {
-            margin-left: 60px;
-            background: #fff;
-            border: 1px solid #e9ecef;
-            padding: 20px;
-            border-radius: 4px;
-            position: relative;
-            animation: fadeInUp 1s ease;
-        }
-
-        .timeline-item-content h3 {
-            margin-top: 0;
-        }
-
-        .timeline-item-content::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .timeline-item-content::before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 20px;
-            left: -14px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #007bff;
-        }
-
-        .card {
-            border: none;
-            animation: fadeInUp 1s ease;
-        }
-
-        .card-body {
-            padding: 20px;
-        }
-
-        .card-title {
-            margin-bottom: 10px;
-        }
-
-        .card-text {
-            margin-bottom: 0;
-        }
-
-        .footer {
-            background: #343a40;
-            color: white;
-            padding: 30px 0;
-        }
-
-        .list-group-item {
-            background: transparent;
-            border: none;
-        }
-
-        .carousel-item img, .carousel-item video {
-            max-height: 400px;
+        header .avatar img {
             width: 100%;
-            object-fit: contain;
+            border-radius: 50%;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .social-icons {
+            margin-top: 1rem;
         }
 
-        .typing-effect {
-            border-right: .15em solid #fff;
-            white-space: nowrap;
-            overflow: hidden;
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        .social-icons a {
+            color: #b3e5fc;
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .social-icons a:hover {
+            color: #29b6f6;
         }
 
         @keyframes typing {
@@ -182,14 +78,30 @@
             from, to { border-color: transparent }
             50% { border-color: white; }
         }
+
+        .typing-effect {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: .15em solid #b3e5fc;
+            animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+        }
     </style>
 </head>
 <body>
-    <header class="bg-primary text-white text-center py-5">
-        <div class="container">
-            <h1>Da Liyue</h1>
-            <p class="typing-effect">I am a HCI researcher, Developer,Program Manager, UX Designer, Amateur Singer</p>
-            <a href="mailto:fgp973@alumni.ku.dk" class="btn btn-outline-light mt-3">Contact Me</a>
+    <header>
+        <div class="intro">
+            <h1>Liyue Da</h1>
+            <h2>达丽悦</h2>
+            <p class="typing-effect" id="typing-text"></p>
+            <div class="social-icons">
+                <a href="https://github.com/LiyueDa" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/liyue-da-13504528a" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:fgp973@alumni.ku.dk"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="avatar">
+            <img src="images/Pixel_avatar.png" alt="Avatar">
         </div>
     </header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
@@ -346,11 +258,11 @@
     <script>
         AOS.init();
 
-        const typedTextSpan = document.querySelector(".typing-effect");
-        const textArray = ["a Program Manager", "a UX Designer", "a Programmer"];
-        const typingDelay = 200;
-        const erasingDelay = 100;
-        const newTextDelay = 2000; // Delay between current and next text
+        const typedTextSpan = document.getElementById("typing-text");
+        const textArray = ["a HCI researcher", "a Developer", "a Program Manager", "a UX Designer", "an Amateur Singer"];
+        const typingDelay = 100;
+        const erasingDelay = 50;
+        const newTextDelay = 1000; // Delay between current and next text
         let textArrayIndex = 0;
         let charIndex = 0;
 
@@ -372,7 +284,7 @@
             } else {
                 textArrayIndex++;
                 if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-                setTimeout(type, typingDelay + 1100);
+                setTimeout(type, typingDelay + 300);
             }
         }
 
